@@ -1,0 +1,20 @@
+{
+  "name": "carshopdemo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LFMYK/CarShopDemoV1",
+  "authors": [
+    "YKLFM <421619670@qq.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "client/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha"
+  }
+}
