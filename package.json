@@ -19,9 +19,18 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "express-debug": "^1.1.1",
     "jade": "^1.11.0",
     "moment": "^2.10.6",
     "mongoose": "^4.1.10",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-nodemon": "^2.0.4",
+    "jshint-stylish": "^2.0.1",
+    "xmlhttprequest": "^1.8.0"
   }
 }

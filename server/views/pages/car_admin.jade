@@ -4,7 +4,8 @@ block content
     .container
         .row
             form(id="form", method="post", action="/admin/car")
-                input(type="hidden", name="car[_id]", value=car._id)
+                if car._id
+                    input(type="hidden", name="car[_id]", value=car._id)
                 .form-group.row
                     label.col-sm-2.form-control-label(for="inputbrand") 厂牌
                     .col-sm-10
@@ -24,7 +25,7 @@ block content
                 .form-group.row
                     label.col-sm-2.form-control-label(for="inputmodelName") 车型
                     .col-sm-10
-                        input#inputmodelName.form-control(type="text", name="car[modelName]", value=car.modelName)
+                        input#inputmodelName.form-control(type="text", name="car[carModelName]", value=car.carModelName)
                 .form-group.row
                     label.col-sm-2.form-control-label(for="ml") 排量
                     .col-sm-10
@@ -45,5 +46,9 @@ block content
                     label.col-sm-2.form-control-label(for="imageLogo") 图片
                     .col-sm-10
                         input#imageLogo.form-control(type="text", name="car[imageLogo]", value=car.imageLogo)
+                .form-group.row
+                    label.col-sm-2.form-control-label(for="inputproTitle") 展示名称
+                    .col-sm-10
+                        input#inputproTitle.form-control(type="text", name="car[proTitle]", value=car.proTitle)
                 .row.text-right
                     button.btn.btn-primary(type="submit") 提交
