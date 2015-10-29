@@ -1,3 +1,4 @@
+'use strict';
 var mongoose = require('mongoose');
 
 var schemaCar = new mongoose.Schema({
@@ -55,7 +56,7 @@ schemaCar.statics = {
       })
       .exec(cb);
   }
-}
+};
 
 var ModelCar = mongoose.model('ModelCar', schemaCar, 'car');
 

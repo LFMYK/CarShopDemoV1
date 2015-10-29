@@ -29,6 +29,7 @@ app.use(bodyParser.urlencoded({
 
 require('./routes')(app);
 
+app.locals.appTitle = '汽车商城';
 
 app.listen(port);
 

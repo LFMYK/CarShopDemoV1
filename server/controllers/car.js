@@ -13,7 +13,7 @@ module.exports.showDetail = function(req, res, next) {
       car: car
     });
   });
-}
+};
 
 module.exports.showList = function(req, res, next) {
   ModelCar.fetch(function(err, cars) {
@@ -25,14 +25,14 @@ module.exports.showList = function(req, res, next) {
       cars: cars
     });
   });
-}
+};
 
 module.exports.new = function(req, res, next) {
   res.render('car_admin', {
     title: '汽车商城 后台录入页',
     car: {}
   });
-}
+};
 module.exports.update = function(req, res, next) {
   var id = req.params.id;
   ModelCar.findById(id, function(err, car) {
@@ -44,7 +44,7 @@ module.exports.update = function(req, res, next) {
       car: car
     });
   });
-}
+};
 module.exports.post = function(req, res, next) {
   var carObj = req.body.car;
   if (!carObj) {
@@ -69,7 +69,7 @@ module.exports.post = function(req, res, next) {
       return res.redirect('/car/' + id);
     });
   }
-}
+};
 module.exports.del = function(req, res, next) {
   var id = req.query.id;
   if (id) {
@@ -90,4 +90,4 @@ module.exports.del = function(req, res, next) {
       ok: 0
     });
   }
-}
+};
