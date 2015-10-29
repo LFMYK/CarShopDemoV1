@@ -14,6 +14,19 @@ var path = require('path');
 var morgan = require('morgan');
 app.use(morgan('dev'));
 
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+app.use(session({
+  name: 'carshopsession',
+  secret: 'carshopkey',
+  resave: false,
+  saveUninitialized: false,
+  cookie:{maxAge:3 * 24 * 60 * 60 * 1000},
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+  })
+}));
+
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.locals.moment = require('moment');
